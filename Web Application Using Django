@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
  <title>K Stores</title>
     </head>
     <style>
@@ -13,8 +14,38 @@
             
         }
         .dropdown{
-            position: absolute;
+            position: relative;
+            display: inline-block;
         }
+        .dropbtn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+        .dropdown-content {
+             display: none;
+             position: absolute;
+             background-color: #f1f1f1;
+             min-width: 160px;
+             box-shadow: 0px 8px 16px 0px rgb(175, 202, 100);
+             z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: rgb(147, 122, 194);}
+
+        .dropdown:hover .dropdown-content {display: block;}
+
+        .dropdown:hover .dropbtn {background-color: #609fd3;}
+
+
     </style>
     <body>
    <div class="box">
@@ -23,13 +54,21 @@
    <br><br><br><center>   <img src="https://i.postimg.cc/bJTTWdbR/logo.png"  width="100px" height="100px"></center>
  
    <!-- Creating a hoverable drop down -->
+   <center>
    <div class="dropdown">
-    <center>
+    
 
     <button class="dropbtn">New Arrivals</button>
     <button class="dropbtn">TWS</button>
+    <div class="dropdown-content">
+        <a class= "links" href="#">Airdopes 31</a>
+        <a class= "links" href="#">Airdopes 141</a>
+        <a class= "links" href="#">Anc 411 31</a>
+        <a class= "links" href="#"> 131 pro</a>
+        <a class= "links" href="#"> 131 DC gaming</a>
+    </div>
     <button class="dropbtn">Smart Watches</button>
-    <button class="dropbtn">Blutooth</button>
+    <button class="dropbtn">Earphones</button>    
     <button class="dropbtn">Sound Bars</button>
 </center>
 
