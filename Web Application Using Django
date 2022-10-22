@@ -44,12 +44,79 @@
         .dropdown:hover .dropdown-content {display: block;}
 
         .dropdown:hover .dropbtn {background-color: #609fd3;}
-
+        
+        .sdl[type=text] {
+            float: right;
+            padding: 6px;
+            margin-top: 8px;
+            margin-right: 16px;
+            border: none;
+            font-size: 17px;
+            border: 1px solid #ccc;
+        }
+        .slide{
+            display: none;
+                }
+                /* REMOVE THIS, USE YOUR OWN  */
+/* STYLES SPECIFIC TO FOOTER  */
+.footer {
+  width: 100%;
+  height: auto;
+  background-color: #5087b4;
+}
+.footer .col {
+  width: 190px;
+  height: auto;
+  float: left;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0px 20px 20px 20px;
+}
+.footer .col h1 {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 17px;
+  padding: 20px 0px 5px 0px;
+  color: rgba(255,255,255,.2);
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.250em;
+}
+.footer .col ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.footer .col ul li {
+  color: #999999;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 5px 0px 5px 0px;
+  cursor: pointer;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+}
+.footer .col ul li:hover {
+  color: #ffffff;
+  transition: .1s;
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+}
+.clearfix {
+  clear: both;
+}
 
     </style>
+                    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" width="fit-content">
+
     <body>
-   <div class="box">
-    <h4>Customer care : 1800 100 4506</h4>
+   <div class="box"><b>
+    <h4>Customer care : 1800 100 4506</h4></b>
    </div>
    <br><br><br><center>   <img src="https://i.postimg.cc/bJTTWdbR/logo.png"  width="100px" height="100px"></center>
  
@@ -70,8 +137,141 @@
     <button class="dropbtn">Smart Watches</button>
     <button class="dropbtn">Earphones</button>    
     <button class="dropbtn">Sound Bars</button>
+
+  
+  
+   </div>
+   <br><br>
+   
+    <div class="sdl">
+        <input type="text" placeholder="Search..">
+    </div>
+</center>
+<br><br>
+
+<!-- automatic scrolling images -->
+<div class="slide">
+<img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/web_4_2000x.png?v=1666077793" width="33%" height="70%">
+<img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/diwali-banner_2000x.jpg?v=1665855252" width="33%" height="70%">
+<img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/web_2_2_2000x.png?v=1665727855" width="33%" height="70%">
+</div>
+  <!--  Java Script for automatic sliding images -->
+   <script>
+ var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("slide");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+
+   </script>
+   <!-- adding timer for the offer website -->
+<br><br>
+<center>
+    
+    <div class="w3-brown w3-hover-shadow w3-padding-64 w3-center" style="width:25%">
+    <h3>Exciting offers will be end in</h3>
+<p id="demo" ></p>
+     
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Oct 31, 2022 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+    </div>
 </center>
 
-   </div>
+<!-- FOOTER START -->
+<div class="footer">
+    <div class="contain">
+    <div class="col">
+      <h1>Company</h1>
+      <ul>
+        <li>About</li>
+        <li>Mission</li>
+        <li>Services</li>
+        <li>Social</li>
+        <li>Get in touch</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Products</h1>
+      <ul>
+        <li>About</li>
+        <li>Mission</li>
+        <li>Services</li>
+        <li>Social</li>
+        <li>Get in touch</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Accounts</h1>
+      <ul>
+        <li>About</li>
+        <li>Mission</li>
+        <li>Services</li>
+        <li>Social</li>
+        <li>Get in touch</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Resources</h1>
+      <ul>
+        <li>Webmail</li>
+        <li>Redeem code</li>
+        <li>WHOIS lookup</li>
+        <li>Site map</li>
+        <li>Web templates</li>
+        <li>Email templates</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Support</h1>
+      <ul>
+        <li>Contact us</li>
+        <li>Web chat</li>
+        <li>Open ticket</li>
+      </ul>
+    </div>
+  <div class="clearfix"></div>
+  </div>
+  </div>
+  <!-- END OF FOOTER -->
     </body>
 </html>
